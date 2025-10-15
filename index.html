@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Awesome App</title>
+  <meta name="description" content="A simple, beautiful page generated automatically." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg1: #a18cd1;
+      --bg2: #fbc2eb;
+      --bg3: #fda085;
+      --bg4: #f6d365;
+      --text: #0f172a;
+      --muted: #334155;
+      --card: rgba(255, 255, 255, 0.85);
+      --cardBorder: rgba(255, 255, 255, 0.7);
+      --shadow: 0 20px 45px rgba(2, 8, 23, 0.2);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(255,255,255,0.25), transparent 60%),
+        radial-gradient(1200px 800px at 110% 110%, rgba(255,255,255,0.2), transparent 60%),
+        linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 35%, var(--bg3) 70%, var(--bg4) 100%);
+      background-attachment: fixed;
+    }
+    .app {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      width: 100%;
+      max-width: 760px;
+      background: var(--card);
+      border: 1px solid var(--cardBorder);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 3rem 2.5rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 0.875rem;
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(92deg, #0ea5e9, #22c55e 45%, #f59e0b 85%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    p {
+      margin: 0;
+      font-size: clamp(1rem, 1.4vw, 1.125rem);
+      color: var(--muted);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #064e3b;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      margin-bottom: 1rem;
+    }
+    .badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      h1 {
+        transition: letter-spacing 220ms ease;
+      }
+      .card:hover h1 {
+        letter-spacing: 0.005em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app" aria-labelledby="page-title">
+    <section class="card">
+      <div class="badge" aria-hidden="true">
+        <span class="dot"></span>
+        Live
+      </div>
+      <h1 id="page-title">Hello, World!</h1>
+      <p>This site was generated automatically to showcase a simple, beautiful starter page.</p>
+    </section>
+  </main>
+</body>
+</html>
